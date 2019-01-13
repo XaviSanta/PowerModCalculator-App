@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Inverse.class);
         startActivity(intent);
     }
+
+    public void powerMod(View view) {
+        Intent intent = new Intent(this, PowerMod.class);
+        startActivity(intent);
+    }
 }

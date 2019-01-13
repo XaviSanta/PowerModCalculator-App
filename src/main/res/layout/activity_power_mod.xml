@@ -1,43 +1,43 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:id="@+id/info"
+    android:id="@+id/power"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center">
 
     <EditText
-        android:id="@+id/textView0"
+        android:id="@+id/base"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="First number"/>
+        android:hint="Base"/>
 
     <EditText
-        android:id="@+id/textView1"
+        android:id="@+id/exponent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="Second number"/>
+        android:hint="Exponent"/>
+
+    <EditText
+        android:id="@+id/modulus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Modul"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="run"
-        android:text="Calculate gcd" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="runExtEucli"
-        android:text="BEZOUT IDENTITY" />
+        android:onClick="runPower"
+        android:text="Compute power" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="clearEuclidean"
+        android:onClick="clearPower"
         android:text="Clear"/>
 
     <ScrollView
@@ -51,6 +51,4 @@
             android:orientation="vertical"
             android:layout_gravity="top"/>
     </ScrollView>
-
-
 </LinearLayout>

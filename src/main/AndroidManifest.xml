@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Euclidean" />
-        <activity android:name=".Inverse"></activity>
+        <activity android:name=".Inverse" />
+        <activity android:name=".PowerMod"></activity>
     </application>
 
 </manifest>
