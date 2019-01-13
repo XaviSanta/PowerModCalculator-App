@@ -36,7 +36,7 @@ public class Euclidean extends AppCompatActivity {
 
         // Set text to display in TextView
         tv.setText(text);
-        tv.setTextSize(15);
+        tv.setTextSize(18);
         // Set a text color for TextView text
         tv.setTextColor(Color.parseColor(color));
 
@@ -63,7 +63,7 @@ public class Euclidean extends AppCompatActivity {
             long r1 = b;
             long q, r2;
             String s;
-            createTextView("START", "#ff0000");
+            createTextView("Start", "#2259e3");
             while (r1 != 0) {
                 q = r0 / r1;
                 r2 = r0 - q*r1;
@@ -73,11 +73,10 @@ public class Euclidean extends AppCompatActivity {
                 r1 = r2;
             }
             s = r0 + " = gcd(" + a + ", " + b +")";
-            createTextView("FINISHED","#ff0000");
-            createTextView(s,"#000000");
-            createTextView(s,"#ffffff");
+            createTextView(s,"#2259e3");
+            createTextView(" ","#ffffff");
         }catch(NumberFormatException nfe) {
-            createTextView("FAIL","#ff0000");
+            createTextView("Fail","#ff0000");
         }
 
     }
@@ -89,12 +88,13 @@ public class Euclidean extends AppCompatActivity {
             long a = Integer.parseInt(_1.getText().toString());
             long b = Integer.parseInt(_2.getText().toString());
             long [] ext = extendedEuclidean(a,b);
-            String s = "BEZOUT IDENTITY";
-            createTextView(s,"#FF0000");
+            String s = "Bezout Identity";
+            createTextView(s,"#2259e3");
             s = ext[1] + "(" + a + ") + " + ext[2] + "(" + b + ") = " + ext[0];
             createTextView(s,"#000000");
+            createTextView(" ","#ffffff");
         }catch(NumberFormatException nfe) {
-            createTextView("FAIL","#ff0000");
+            createTextView("Fail","#ff0000");
         }
     }
 

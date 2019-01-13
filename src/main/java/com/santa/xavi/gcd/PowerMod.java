@@ -38,8 +38,10 @@ public class PowerMod extends AppCompatActivity {
             // Base Case
             try {
                 if (Math.pow(a.doubleValue(), b.doubleValue()) < c.doubleValue()) {
-                    str ="Finish: " + Math.pow(a.doubleValue(), b.doubleValue());
-                    createTextView(str,"#000000");
+                    double mySol = Math.pow(a.doubleValue(), b.doubleValue());
+                    str = "Solution: " +  Math.round(mySol);
+                    createTextView(str,"#2259e3");
+                    createTextView(" ","#ffffff");
                     break;
                 }
             } catch (Exception e) {
@@ -49,14 +51,15 @@ public class PowerMod extends AppCompatActivity {
             // FERMAT
             if (a.gcd(c).intValue() == 1 && b.longValue() > c.longValue()) {
                 str = "Little Fermat Theorem";
-                createTextView(str,"#000000");
+                createTextView(str,"#2259e3");
                 b = new BigInteger(Long.toString(fermat(a,b,c)));
             }
             // BY HAND
             else {
                 str = "Binary";
-                createTextView(str,"#000000");
+                createTextView(str,"#2259e3");
                 byHand(a, b, c);
+                createTextView(" ","#ffffff");
                 door = 0;
             }
         }
@@ -65,11 +68,13 @@ public class PowerMod extends AppCompatActivity {
         long d      = (c.longValue() - 1);
         long newExp = b.longValue() / d;
         long rem    = b.longValue() % d;
-        String str = a + " ^ (" + newExp + " * " + d + ") * "
-                + a + " ^ " + rem + " mod " + c;
+        String str;
+        str ="1)  " + b + " = " + newExp + " * " + d + " + " + rem;
         createTextView(str,"#000000");
-        createTextView("=","#000000");
-        str = a + " ^ " + rem + " mod " + c;
+        str ="2)  " +  a + " ^ (" + newExp + " * " + d + ") * "
+                   + a + " ^ " + rem + " mod " + c;
+        createTextView(str,"#000000");
+        str ="3)  " + a + " ^ " + rem + " mod " + c;
         createTextView(str,"#000000");
         return rem;
     }
@@ -95,7 +100,8 @@ public class PowerMod extends AppCompatActivity {
                 myVal = (myVal * myVal) % c.longValue();
             }
             str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
-            createTextView(str,"#000000");
+            if (l+1 != length) createTextView(str,"#000000");
+            if (l+1 == length) createTextView("Solution: " + str,"#2259e3");
         }
     }
     public static String printConcatenation(int realLength, String str, BigInteger a, long bin) {

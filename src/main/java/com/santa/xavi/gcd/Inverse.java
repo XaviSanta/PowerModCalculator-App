@@ -25,10 +25,10 @@ public class Inverse extends AppCompatActivity {
             if (ext[1] < 0){
                 ext[1] = mod + ext[1];
             }
-            String s = inv + "^-1 in Z_" + mod + " = " + ext[1];
+            String s = inv + "⁻¹ mod " + mod + " = " + ext[1];
             createTextView(s,"#000000");
         }catch(NumberFormatException nfe) {
-            createTextView("FAIL","#ff0000");
+            createTextView("Fail","#ff0000");
         }
     }
 
