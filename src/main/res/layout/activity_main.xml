@@ -5,36 +5,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center">
-
-    <EditText
-        android:id="@+id/textView0"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:text="Euclidean Algorithm"
+        android:onClick="euclideanGcd"/>
 
     <Button
-        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="run"
-        android:text="Calculate gcd" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:id="@+id/info2"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="top"/>
-    </ScrollView>
-
+        android:text="Inverse Modulus"
+        android:onClick="inverseMod"/>
 </LinearLayout>
