@@ -41,20 +41,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="run"
-            android:text="Calculate gcd" />
+            android:text="Calculate gcd"
+
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:background="@drawable/button_shape"
+            android:shadowColor="#fd6600"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
+            />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="runExtEucli"
-            android:text="BEZOUT IDENTITY" />
+            android:text="BEZOUT IDENTITY"
+
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="5dp"
+            android:shadowColor="#fd6600"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="clearEuclidean"
-            android:text="Clear"/>
+            android:text="Clear"
+
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:background="@drawable/button_shape_2"
+            android:shadowColor="#0078ff"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"/>
 
         <ScrollView
             android:layout_width="match_parent"

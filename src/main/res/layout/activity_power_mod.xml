@@ -48,14 +48,30 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
             android:onClick="runPower"
-            android:text="Compute power" />
+            android:shadowColor="#fd6600"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
+            android:text="Compute power"
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="clearPower"
-            android:text="Clear"/>
+            android:text="Clear"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+
+            android:background="@drawable/button_shape_2"
+            android:shadowColor="#0078ff"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"/>
 
         <ScrollView
             android:layout_width="match_parent"

@@ -95,13 +95,67 @@ public class PowerMod extends AppCompatActivity {
         for (int l = 1; l < length; l++) {
             digit = Integer.parseInt(Long.toString(bin).substring(l, l + 1));
             if (digit == 1) {
-                myVal = (myVal * myVal * a.longValue()) % c.longValue();
+                if(myVal*myVal > c.longValue()){
+                    myVal = myVal*myVal;
+                    String myStr = myVal + " *" + a.longValue();
+                    str = printConcatenation(length - l, myStr, a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                    createTextView(str,"#000000");
+
+                    if(myVal != myVal % c.longValue()){
+                        myVal = myVal % c.longValue();
+                        myStr = myVal + " *" + a.longValue();
+                        str = printConcatenation(length - l, myStr, a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                        createTextView(str,"#000000");
+                    }
+
+                    myVal = myVal * a.longValue();
+                    str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                    createTextView(str,"#000000");
+
+                    if(myVal >= c.longValue()){
+                        myVal = myVal % c.longValue();
+                        str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                        createTextView(str,"#000000");
+                    }
+                }else{
+                    if(myVal*myVal*a.longValue() > c.longValue()){
+                        myVal = (myVal * myVal);
+                        str = myVal + " *" + a.longValue();
+                        str = printConcatenation(length - l, str, a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                        createTextView(str,"#000000");
+
+                        myVal = (myVal * myVal) * a.longValue();
+                        str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                        createTextView(str,"#000000");
+                        if(myVal >= c.longValue()){
+                            myVal = myVal % c.longValue();
+                            str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                            createTextView(str,"#000000");
+                        }
+                    }else{
+                        myVal = (myVal * myVal * a.longValue()) % c.longValue();
+                        str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                        createTextView(str,"#000000");
+                    }
+                }
+
             } else {
-                myVal = (myVal * myVal) % c.longValue();
+                if(myVal*myVal > c.longValue()){
+                    myVal = myVal*myVal;
+                    str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                    createTextView(str,"#000000");
+
+                    myVal = myVal % c.longValue();
+                    str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                    createTextView(str,"#000000");
+
+                }else{
+                    myVal = (myVal * myVal) % c.longValue();
+                    str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
+                    createTextView(str,"#000000");
+                }
             }
-            str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
-            if (l+1 != length) createTextView(str,"#000000");
-            if (l+1 == length) createTextView("Solution: " + str,"#2259e3");
+            if (l+1 == length) createTextView("Solution: " + Long.toString(myVal),"#2259e3");
         }
     }
     public static String printConcatenation(int realLength, String str, BigInteger a, long bin) {
