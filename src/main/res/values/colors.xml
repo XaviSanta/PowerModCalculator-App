@@ -5,4 +5,5 @@
     <color name="colorAccent">#fd6600</color>
     <color name="result">#0078ff</color>
     <color name="redd">#ab0505</color>
+    <color name="hint">#730078ff</color>
 </resources>

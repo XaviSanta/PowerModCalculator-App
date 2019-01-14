@@ -24,6 +24,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:textColorHint="@color/hint"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +34,9 @@
             android:hint="Base"/>
 
         <EditText
+            android:textColorHint="@color/hint"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/exponent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,11 +44,14 @@
             android:hint="Exponent"/>
 
         <EditText
+            android:textColorHint="@color/hint"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/modulus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="Modul"/>
+            android:hint="Modulus"/>
 
         <Button
             android:id="@+id/button"
