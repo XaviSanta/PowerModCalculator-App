@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <Button
         android:id="@+id/button6"
         android:layout_marginStart="8dp"
@@ -26,8 +27,8 @@
         android:layout_height="60dp"
         android:background="@drawable/button_shape"
         android:shadowColor="#fd6600"
-        android:shadowDx="0"
-        android:shadowDy="0"
+        android:shadowDx="3"
+        android:shadowDy="3"
         android:shadowRadius="8"/>
 
     <Button
@@ -51,8 +52,8 @@
         android:layout_height="60dp"
         android:background="@drawable/button_shape"
         android:shadowColor="#fd6600"
-        android:shadowDx="0"
-        android:shadowDy="0"
+        android:shadowDx="3"
+        android:shadowDy="3"
         android:shadowRadius="8"/>
 
     <Button
@@ -76,11 +77,24 @@
         android:layout_height="60dp"
         android:background="@drawable/button_shape"
         android:shadowColor="#fd6600"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="8"
-        />
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="8"/>
 
-
+    <!-- <Button
+         android:id="@+id/button63"
+         android:layout_width="191dp"
+         android:layout_height="192dp"
+         android:layout_marginTop="236dp"
+         android:background="@drawable/button_shape_2"
+         android:text="%"
+         android:textSize="110dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:shadowColor="#fd6600"
+         android:shadowDx="8"
+         android:shadowDy="8"
+         android:shadowRadius="8" />-->
 
 </android.support.constraint.ConstraintLayout>
