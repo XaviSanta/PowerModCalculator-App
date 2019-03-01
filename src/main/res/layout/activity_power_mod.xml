@@ -26,32 +26,32 @@
         <EditText
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:id="@+id/base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="Base"/>
+            android:hint="a: Base"/>
 
         <EditText
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:id="@+id/exponent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="Power"/>
+            android:hint="b: Power"/>
 
         <EditText
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:id="@+id/modulus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="Mod"/>
+            android:hint="n: Mod"/>
 
         <Button
             android:id="@+id/button"

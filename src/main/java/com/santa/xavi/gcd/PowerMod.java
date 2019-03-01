@@ -34,6 +34,9 @@ public class PowerMod extends AppCompatActivity {
     public void modExp(BigInteger a, BigInteger b, BigInteger c){
         int door = 1;
         String str;
+        str = a + " ^ " + b + " mod " + c;
+        createTextView(str,"#fd6600");
+
         while (door == 1) {
             // Base Case
             try {
@@ -42,6 +45,10 @@ public class PowerMod extends AppCompatActivity {
                     str = "Solution: " +  Math.round(mySol);
                     createTextView(str,"#2259e3");
                     createTextView(" ","#ffffff");
+                    break;
+                }
+                if (b.longValue() == 1){
+                    exponentOne(a,c);
                     break;
                 }
             } catch (Exception e) {
@@ -53,10 +60,14 @@ public class PowerMod extends AppCompatActivity {
                 str = "Little Fermat Theorem";
                 createTextView(str,"#2259e3");
                 b = new BigInteger(Long.toString(fermat(a,b,c)));
+                if (b.longValue() == 1){
+                    exponentOne(a,c);
+                    door = 0;
+                }
             }
             // BY HAND
             else {
-                str = "Binary";
+                str = "Binary Phase";
                 createTextView(str,"#2259e3");
                 byHand(a, b, c);
                 createTextView(" ","#ffffff");
@@ -79,11 +90,22 @@ public class PowerMod extends AppCompatActivity {
         return rem;
     }
     public void byHand(BigInteger a, BigInteger b, BigInteger c) {
+
+        String str ="1) Pass the exponent to binary";
+        createTextView(str,"#2259e3");
+
         String myBin = Long.toBinaryString(b.longValue());
-        String str = b.longValue() + " = " + myBin + " b";
+        str = b.longValue() + " = " + myBin + " in binary";
         createTextView(str,"#000000");
+
         long bin = Long.parseLong(myBin, 10);
         int length = (int) (Math.log10(bin) + 1);
+
+        str ="2) Compute " + a + " ^ " + b +" using binary. Following that: \n" +
+                "2.1) From left to right, write "+ a + " for the first `1` \n" +
+                "2.2) Next number = `1` --> add `)² *"+ a + "`\n" +
+                "2.3) Next number = `0` --> add `)²`" ;
+        createTextView(str,"#2259e3");
 
         str = printConcatenation(length, a.toString(), a, bin);
         createTextView(str,"#000000");
@@ -124,7 +146,7 @@ public class PowerMod extends AppCompatActivity {
                         str = printConcatenation(length - l, str, a, Integer.parseInt(Long.toString(bin).substring(l, length)));
                         createTextView(str,"#000000");
 
-                        myVal = (myVal * myVal) * a.longValue();
+                        myVal = myVal * a.longValue();
                         str = printConcatenation(length - l, Long.toString(myVal), a, Integer.parseInt(Long.toString(bin).substring(l, length)));
                         createTextView(str,"#000000");
                         if(myVal >= c.longValue()){
@@ -158,11 +180,17 @@ public class PowerMod extends AppCompatActivity {
             if (l+1 == length) createTextView("Solution: " + Long.toString(myVal),"#2259e3");
         }
     }
+    public void exponentOne(BigInteger a, BigInteger c) {
+
+        String str  = "Solution: " + a.mod(c) + "\n";
+        createTextView(str,"#2259e3");
+    }
     public static String printConcatenation(int realLength, String str, BigInteger a, long bin) {
         int myLength = 0;
         if (bin != 0) {
             myLength = (int) (Math.log10(bin) + 1);
         }
+
         if (myLength != realLength) {
             int nZ = realLength - myLength;
             if (bin == 0) {
@@ -176,6 +204,7 @@ public class PowerMod extends AppCompatActivity {
                 str = str + " *" + a;
             }
         }
+
         int digit;
         for (int l = 1; l < myLength; l++) {
             digit = Integer.parseInt(Long.toString(bin).substring(l, l + 1));

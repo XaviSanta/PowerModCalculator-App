@@ -25,7 +25,7 @@
         <EditText
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:id="@+id/textView0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         <EditText
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

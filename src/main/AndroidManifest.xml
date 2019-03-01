@@ -18,10 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Euclidean"
+            android:label="Gcd( a , b )"
             android:screenOrientation="portrait"/>
         <activity android:name=".Inverse"
+            android:label="X⁻¹ mod n"
             android:screenOrientation="portrait"/>
         <activity android:name=".PowerMod"
+            android:label="aᵇ mod n"
             android:screenOrientation="portrait"></activity>
     </application>
 
