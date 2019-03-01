@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     public void euclideanGcd(View view) {
@@ -36,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void powerMod(View view) {
         Intent intent = new Intent(this, PowerMod.class);
+        startActivity(intent);
+    }
+
+    public void factorize(View view) {
+        Intent intent = new Intent(this, Factor.class);
         startActivity(intent);
     }
 }

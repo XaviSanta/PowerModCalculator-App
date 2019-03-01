@@ -26,6 +26,9 @@
         <activity android:name=".PowerMod"
             android:label="aᵇ mod n"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".Factor"
+            android:label="Factorization"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

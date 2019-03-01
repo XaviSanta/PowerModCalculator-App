@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import java.math.*;
 
 public class PowerMod extends AppCompatActivity {
+
+    private Boolean showSteps = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +29,21 @@ public class PowerMod extends AppCompatActivity {
             BigInteger b1 = new BigInteger(b.getText().toString());
             BigInteger b2 = new BigInteger(e.getText().toString());
             BigInteger b3 = new BigInteger(m.getText().toString());
-            modExp(b1, b2, b3);
+            if(showSteps){
+                modExp(b1, b2, b3);
+            }else{
+                modExpNoSteps(b1, b2, b3);
+            }
         }catch (Exception e){
             createTextView("Fail", "#ff0000");
         }
     }
+
+    public void showSteps(View v) {
+        this.showSteps = !this.showSteps;
+    }
+
+    // SHOW STEPS == TRUE
     public void modExp(BigInteger a, BigInteger b, BigInteger c){
         int door = 1;
         String str;
@@ -218,6 +231,14 @@ public class PowerMod extends AppCompatActivity {
         return str;
     }
 
+    // SHOW STEPS == FALSE
+    public void modExpNoSteps(BigInteger a, BigInteger b, BigInteger c) {
+        String str = a + " ^ " + b + " mod " + c;
+        createTextView(str,"#fd6600");
+
+        str  = "Solution: " + a.modPow(b,c) + "\n";
+        createTextView(str,"#2259e3");
+    }
 
     public void createTextView(String text, String color) {
         // Get the widgets reference from XML layout

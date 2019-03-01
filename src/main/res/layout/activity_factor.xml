@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/info"
+        android:id="@+id/power"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -26,63 +27,35 @@
             android:textColorHint="@color/hint"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/colorAccent"
-            android:id="@+id/textView0"
+            android:id="@+id/base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="a"/>
-
-        <EditText
-            android:textColorHint="@color/hint"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorAccent"
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="b"/>
+            android:hint="My number"/>
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="run"
-            android:text="Calculate gcd"
-
-            android:textColor="#000000"
-            android:textSize="30sp"
             android:background="@drawable/button_shape"
+            android:onClick="runFactor"
             android:shadowColor="#fd6600"
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="8"
-            />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="runExtEucli"
-            android:text="BEZOUT IDENTITY"
-
+            android:text="Find factors"
             android:textColor="#000000"
-            android:textSize="30sp"
-            android:background="@drawable/button_shape"
-            android:layout_marginTop="5dp"
-            android:shadowColor="#fd6600"
-            android:shadowDx="3"
-            android:shadowDy="3"
-            android:shadowRadius="8"/>
+            android:textSize="30sp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="clearEuclidean"
+            android:onClick="clearFactor"
             android:text="Clear"
-
             android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="30sp"
+
             android:background="@drawable/button_shape_2"
             android:shadowColor="#0078ff"
             android:shadowDx="3"
@@ -104,7 +77,5 @@
                 android:orientation="vertical"
                 android:layout_gravity="top"/>
         </ScrollView>
-
-
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
