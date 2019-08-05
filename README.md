@@ -2,7 +2,8 @@
 
 An Android application to calculate modulus functions and show step by step the process.
 
-![Logo](https://www.subeimagenes.com/thumb/logoo-1995891.png)
+![Logo](https://thumbs.subefotos.com/74a5303b5b4472f81dd523f1a837b090o.jpg)
+![screenshot](https://thumbs.subefotos.com/382eaf8870f10c58c69eecacdc5eea50o.jpg)
 
 [Google Play | Power Mod Calculator](https://play.google.com/store/apps/details?id=com.santa.xavi.gcd)
 
